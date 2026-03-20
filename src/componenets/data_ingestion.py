@@ -2,10 +2,15 @@ import os
 import sys  ## for custom exception
 from src.exception import CustomException
 from src.logger import logging
-import pandas as pd  # we have to work with data frame so we have to import pandas
+import pandas as pd  ## we have to work with data frame so we have to import pandas
 
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
+from src.componenets.data_transformation import DataTransformation
+from src.componenets.data_transformation import DataTransformationConfig
+
+from src.componenets.model_trainer import ModelTrainer
+from src.componenets.model_trainer import ModelTrainerConfig
 
 
 @dataclass
