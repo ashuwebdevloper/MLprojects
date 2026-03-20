@@ -1,18 +1,17 @@
 import os
-import sys  ## for custom exception
+import sys
 from src.exception import CustomException
 from src.logger import logging
-import pandas as pd  ## we have to work with data frame so we have to import pandas
+import pandas as pd
 
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
+
 from src.componenets.data_transformation import DataTransformation
 from src.componenets.data_transformation import DataTransformationConfig
 
-from src.componenets.model_trainer import ModelTrainer
 from src.componenets.model_trainer import ModelTrainerConfig
-
-
+from src.componenets.model_trainer import ModelTrainer
 @dataclass
 class DataIngestionConfig:
     train_data_path: str=os.path.join('artifacts',"train.csv")
@@ -26,7 +25,7 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("Entered the data ingestion method or component")
         try:
-            df=pd.read_csv('C:\\Users\\aboyc\\MLprojects\\notebook\\data\\stud.csv')
+            df=pd.read_csv('C:\Users\aboyc\MLprojects\notebook\data\stud.csv')
             logging.info('Read the dataset as dataframe')
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path),exist_ok=True)
