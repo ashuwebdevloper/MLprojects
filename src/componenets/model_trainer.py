@@ -119,3 +119,5 @@ class ModelTrainer:
             
         except Exception as e:
             raise CustomException(e,sys)
+
+            #not any thing much to do here just train the model and save the model file
