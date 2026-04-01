@@ -19,7 +19,6 @@ from src.logger import logging
 
 from src.utils import save_object,evaluate_models
 
- 
 
 @dataclass
 class ModelTrainerConfig:
